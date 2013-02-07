@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jop40d-factory-279cdc5d.tgz
+wget -nc -q https://dl.google.com/dl/android/aosp/occam-jop40d-factory-ca7602f0.tgz
 tar zxf occam-jop40d-factory-ca7602f0.tgz
 cd occam-jop40d
 unzip image-occam-jop40d.zip
