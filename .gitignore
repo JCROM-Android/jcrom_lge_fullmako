@@ -1,4 +1,5 @@
 proprietary/tools/log.txt
+proprietary/system/vendor
 proprietary/system/vendor/lib/libdrmdecrypt.so
 proprietary/system/vendor/lib/libwvm.so
 proprietary/system/vendor/lib/libwvdrm_L1.so
@@ -18,6 +19,7 @@ proprietary/system/vendor/firmware/discretix/dxhdcp2.b03
 proprietary/system/vendor/firmware/discretix/dxhdcp2.b02
 proprietary/system/vendor/firmware/discretix/dxhdcp2.b01
 proprietary/system/vendor/firmware/discretix/dxhdcp2.mdt
+proprietary/system/lib
 proprietary/system/lib/libpatts_engine_jni_api.so
 proprietary/system/lib/libchromatix_imx111_preview.so
 proprietary/system/lib/libvorbisencoder.so
@@ -256,6 +258,8 @@ proprietary/system/app/GooglePartnerSetup/GooglePartnerSetup.apk
 proprietary/system/app/GoogleServicesFramework/GoogleServicesFramework.apk
 proprietary/system/app/Magazines/Magazines.apk
 proprietary/system/app/GoogleEars/GoogleEars.apk
+proprietary/system/app/GmsCore/PrebuiltGmsCore.apk
 proprietary/system/etc/firmware/wcd9310/wcd9310_anc.bin
 proprietary/system/etc/firmware/wcd9310/wcd9310_mbhc.bin
 proprietary/tools/occam-jop40d-factory-ca7602f0.tgz
+proprietary/tools/occam-jdq39-factory-345dc199.tgz

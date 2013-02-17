@@ -10,6 +10,7 @@ mkdir -p ${DST_SYSTEM}/etc/preferred-apps
 mkdir -p ${DST_SYSTEM}/etc/updatecmds
 mkdir -p ${DST_SYSTEM}/vendor/lib/drm
 mkdir -p ${DST_SYSTEM}/vendor/firmware/discretix
+mkdir -p ${DST_SYSTEM}/vendor/firmware/keymaster
 mkdir -p ${DST_SYSTEM}/bin
 mkdir -p ${DST_SYSTEM}/media/video
 mkdir -p ${DST_SYSTEM}/media/audio/ringtones
@@ -69,7 +70,6 @@ cp -a ${SRC_SYSTEM}/lib/libchromatix_ov5647_video_hfr.so ${DST_SYSTEM}/lib/libch
 cp -a ${SRC_SYSTEM}/lib/libqmi_encdec.so ${DST_SYSTEM}/lib/libqmi_encdec.so
 cp -a ${SRC_SYSTEM}/lib/libsensor1.so ${DST_SYSTEM}/lib/libsensor1.so
 cp -a ${SRC_SYSTEM}/lib/libchromatix_s5k4e1_default_video.so ${DST_SYSTEM}/lib/libchromatix_s5k4e1_default_video.so
-cp -a ${SRC_SYSTEM}/lib/libsensor_test.so ${DST_SYSTEM}/lib/libsensor_test.so
 cp -a ${SRC_SYSTEM}/lib/libmmcamera_hdr_lib.so ${DST_SYSTEM}/lib/libmmcamera_hdr_lib.so
 cp -a ${SRC_SYSTEM}/lib/libril-qc-qmi-1.so ${DST_SYSTEM}/lib/libril-qc-qmi-1.so
 cp -a ${SRC_SYSTEM}/lib/libqmiservices.so ${DST_SYSTEM}/lib/libqmiservices.so
@@ -131,6 +131,7 @@ cp -a ${SRC_SYSTEM}/lib/libcamera_fast_af.so ${DST_SYSTEM}/lib/libcamera_fast_af
 cp -a ${SRC_SYSTEM}/lib/libfacelock_jni.so ${DST_SYSTEM}/lib/libfacelock_jni.so
 cp -a ${SRC_SYSTEM}/lib/libWVphoneAPI.so ${DST_SYSTEM}/lib/libWVphoneAPI.so
 cp -a ${SRC_SYSTEM}/lib/libgcomm_jni.so ${DST_SYSTEM}/lib/libgcomm_jni.so
+cp -a ${SRC_SYSTEM}/lib/libgoggles_clientvision.so ${DST_SYSTEM}/lib/libgoggles_clientvision.so
 cp -a ${SRC_SYSTEM}/lib/libfilterpack_facedetect.so ${DST_SYSTEM}/lib/libfilterpack_facedetect.so
 cp -a ${SRC_SYSTEM}/lib/libfrsdk.so ${DST_SYSTEM}/lib/libfrsdk.so
 cp -a ${SRC_SYSTEM}/lib/libgoogle_recognizer_jni.so ${DST_SYSTEM}/lib/libgoogle_recognizer_jni.so
@@ -175,11 +176,8 @@ cp -a ${SRC_SYSTEM}/vendor/firmware/discretix/dxhdcp2.b00 ${DST_SYSTEM}/vendor/f
 cp -a ${SRC_SYSTEM}/vendor/firmware/discretix/dxhdcp2.b02 ${DST_SYSTEM}/vendor/firmware/discretix/dxhdcp2.b02
 cp -a ${SRC_SYSTEM}/bin/btnvtool ${DST_SYSTEM}/bin/btnvtool
 cp -a ${SRC_SYSTEM}/bin/radish ${DST_SYSTEM}/bin/radish
-cp -a ${SRC_SYSTEM}/bin/test_diag ${DST_SYSTEM}/bin/test_diag
-cp -a ${SRC_SYSTEM}/bin/sns_cm_conc_test ${DST_SYSTEM}/bin/sns_cm_conc_test
 cp -a ${SRC_SYSTEM}/bin/qcks ${DST_SYSTEM}/bin/qcks
 cp -a ${SRC_SYSTEM}/bin/efsks ${DST_SYSTEM}/bin/efsks
-cp -a ${SRC_SYSTEM}/bin/sns_debug_file_test ${DST_SYSTEM}/bin/sns_debug_file_test
 cp -a ${SRC_SYSTEM}/bin/bridgemgrd ${DST_SYSTEM}/bin/bridgemgrd
 cp -a ${SRC_SYSTEM}/bin/ATFWD-daemon ${DST_SYSTEM}/bin/ATFWD-daemon
 cp -a ${SRC_SYSTEM}/bin/nl_listener ${DST_SYSTEM}/bin/nl_listener
@@ -189,7 +187,6 @@ cp -a ${SRC_SYSTEM}/bin/rmt_storage ${DST_SYSTEM}/bin/rmt_storage
 cp -a ${SRC_SYSTEM}/bin/hci_qcomm_init ${DST_SYSTEM}/bin/hci_qcomm_init
 cp -a ${SRC_SYSTEM}/bin/mpdecision ${DST_SYSTEM}/bin/mpdecision
 cp -a ${SRC_SYSTEM}/bin/port-bridge ${DST_SYSTEM}/bin/port-bridge
-cp -a ${SRC_SYSTEM}/bin/sns_cm_test ${DST_SYSTEM}/bin/sns_cm_test
 cp -a ${SRC_SYSTEM}/bin/netmgrd ${DST_SYSTEM}/bin/netmgrd
 cp -a ${SRC_SYSTEM}/bin/thermald ${DST_SYSTEM}/bin/thermald
 cp -a ${SRC_SYSTEM}/bin/usbhub_init ${DST_SYSTEM}/bin/usbhub_init
@@ -197,12 +194,9 @@ cp -a ${SRC_SYSTEM}/bin/ks ${DST_SYSTEM}/bin/ks
 cp -a ${SRC_SYSTEM}/bin/qseecomd ${DST_SYSTEM}/bin/qseecomd
 cp -a ${SRC_SYSTEM}/bin/ds_fmc_appd ${DST_SYSTEM}/bin/ds_fmc_appd
 cp -a ${SRC_SYSTEM}/bin/usbhub ${DST_SYSTEM}/bin/usbhub
-cp -a ${SRC_SYSTEM}/bin/sns_dsps_tc0001 ${DST_SYSTEM}/bin/sns_dsps_tc0001
-cp -a ${SRC_SYSTEM}/bin/sns_smr_loopback_test ${DST_SYSTEM}/bin/sns_smr_loopback_test
 cp -a ${SRC_SYSTEM}/bin/qmuxd ${DST_SYSTEM}/bin/qmuxd
 cp -a ${SRC_SYSTEM}/bin/mm-audio-send-cal ${DST_SYSTEM}/bin/mm-audio-send-cal
 cp -a ${SRC_SYSTEM}/bin/diag_klog ${DST_SYSTEM}/bin/diag_klog
-cp -a ${SRC_SYSTEM}/bin/PktRspTest ${DST_SYSTEM}/bin/PktRspTest
 cp -a ${SRC_SYSTEM}/bin/mm-qcamera-daemon ${DST_SYSTEM}/bin/mm-qcamera-daemon
 cp -a ${SRC_SYSTEM}/bin/sensors.qcom ${DST_SYSTEM}/bin/sensors.qcom
 cp -a ${SRC_SYSTEM}/vendor/lib/drm/libdrmwvmplugin.so ${DST_SYSTEM}/vendor/lib/drm/libdrmwvmplugin.so
@@ -250,4 +244,11 @@ cp -a ${SRC_SYSTEM}/usr/srec/en-US/clg ${DST_SYSTEM}/usr/srec/en-US/clg
 cp -a ${SRC_SYSTEM}/usr/srec/en-US/google_hotword_clg ${DST_SYSTEM}/usr/srec/en-US/google_hotword_clg
 cp -a ${SRC_SYSTEM}/usr/srec/en-US/embed_phone_nn_state_sym ${DST_SYSTEM}/usr/srec/en-US/embed_phone_nn_state_sym
 cp -a ${SRC_SYSTEM}/usr/srec/en-US/grammar.config ${DST_SYSTEM}/usr/srec/en-US/grammar.config
+cp -a ${SRC_SYSTEM}/vendor/firmware/keymaster/keymaster.b00 ${DST_SYSTEM}/vendor/firmware/keymaster/keymaster.b00
+cp -a ${SRC_SYSTEM}/vendor/firmware/keymaster/keymaster.b01 ${DST_SYSTEM}/vendor/firmware/keymaster/keymaster.b01
+cp -a ${SRC_SYSTEM}/vendor/firmware/keymaster/keymaster.b02 ${DST_SYSTEM}/vendor/firmware/keymaster/keymaster.b02
+cp -a ${SRC_SYSTEM}/vendor/firmware/keymaster/keymaster.b03 ${DST_SYSTEM}/vendor/firmware/keymaster/keymaster.b03
+cp -a ${SRC_SYSTEM}/vendor/firmware/keymaster/keymaster.mdt ${DST_SYSTEM}/vendor/firmware/keymaster/keymaster.mdt
+cp -a ${SRC_SYSTEM}/lib/hw/audio_policy.msm8960.so ${DST_SYSTEM}/lib/hw/audio_policy.msm8960.so
+cp -a ${SRC_SYSTEM}/lib/hw/keystore.msm8960.so ${DST_SYSTEM}/lib/hw/keystore.msm8960.so
 

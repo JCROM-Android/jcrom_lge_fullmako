@@ -1,11 +1,11 @@
 #!/bin/sh
 
-wget -nc -q https://dl.google.com/dl/android/aosp/occam-jop40d-factory-ca7602f0.tgz
-tar zxf occam-jop40d-factory-ca7602f0.tgz
-cd occam-jop40d
-unzip image-occam-jop40d.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/occam-jdq39-factory-345dc199.tgz
+tar zxf occam-jdq39-factory-345dc199.tgz
+cd occam-jdq39
+unzip image-occam-jdq39.zip
 cd ../
-./simg2img occam-jop40d/system.img system.ext4.img
+./simg2img occam-jdq39/system.img system.ext4.img
 mkdir system
 sudo mount -o loop -t ext4 system.ext4.img system
 sync
@@ -54,6 +54,6 @@ done < ${ODEX_LIST}
 sudo umount system
 rmdir system
 rm -rf tmp
-rm -rf occam-jop40d
+rm -rf occam-jdq39
 rm system.ext4.img
 

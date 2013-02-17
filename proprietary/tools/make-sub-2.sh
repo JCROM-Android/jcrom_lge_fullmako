@@ -14,7 +14,7 @@ cp -a ${SRC_ORIG_SYSTEM}/app/Maps.apk ${DST_SYSTEM}/app/Maps/Maps.apk
 cp -a ${SRC_ORIG_SYSTEM}/app/talkback.apk ${DST_SYSTEM}/app/talkback/talkback.apk
 cp -a ${SRC_ORIG_SYSTEM}/app/OccamQuickOffice.apk ${DST_SYSTEM}/app/OccamQuickOffice/OccamQuickOffice.apk
 cp -a ${SRC_ORIG_SYSTEM}/app/Wallet.apk ${DST_SYSTEM}/app/Wallet/Wallet.apk
-cp -a ${SRC_SYSTEM}/app/GmsCore.apk ${DST_SYSTEM}/app/GmsCore/GmsCore.apk
+cp -a ${SRC_ORIG_SYSTEM}/app/PrebuiltGmsCore.apk ${DST_SYSTEM}/app/GmsCore/PrebuiltGmsCore.apk
 cp -a ${SRC_SYSTEM}/app/FaceLock.apk ${DST_SYSTEM}/app/FaceLock/FaceLock.apk
 cp -a ${SRC_SYSTEM}/app/GoogleEars.apk ${DST_SYSTEM}/app/GoogleEars/GoogleEars.apk
 cp -a ${SRC_SYSTEM}/app/GenieWidget.apk ${DST_SYSTEM}/app/GenieWidget/GenieWidget.apk
