@@ -22,13 +22,14 @@ PRODUCT_PACKAGES += \
     PlusOne \
     SetupWizard \
     Street \
-    Talk \
     VoiceSearchStub \
     PrebuiltGmsCore \
     talkback \
     OccamQuickOffice \
     Wallet \
     GalleryGoogle
+
+#    Talk \
 
 PRODUCT_PACKAGES += \
     Browser \
